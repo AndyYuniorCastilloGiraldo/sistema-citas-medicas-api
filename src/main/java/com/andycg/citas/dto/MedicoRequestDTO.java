@@ -1,0 +1,17 @@
+package com.andycg.citas.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class MedicoRequestDTO {
+    private String nombres;
+    private String apellidos;
+    private String cmp;
+    private String telefono;
+    private String correo;
+    private Long idEspecialidad;
+}
