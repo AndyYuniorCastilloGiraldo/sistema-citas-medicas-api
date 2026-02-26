@@ -39,7 +39,8 @@ public class Cita implements Serializable {
     @JoinColumn(name = "id_medico")
     private Medico medico;
 
+    // OPCIONAL: quién creó la cita (admin o paciente)
     @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
+    @JoinColumn(name = "creado_por")
+    private Usuario creadoPor;
 }

@@ -35,35 +35,40 @@ public class CitaServiceImpl implements CitaService {
     @Override
     @Transactional
     public CitaResponseDTO registrar(CitaRequestDTO citaDTO) {
+
         Paciente paciente = pacienteRepository.findById(citaDTO.getIdPaciente())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Paciente no encontrado"));
 
         Medico medico = medicoRepository.findById(citaDTO.getIdMedico())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Médico no encontrado"));
 
-        Usuario usuario = usuarioRepository.findById(citaDTO.getIdUsuario())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado"));
-
         Cita cita = new Cita();
         mapToEntity(citaDTO, cita);
+
         cita.setPaciente(paciente);
         cita.setMedico(medico);
-        cita.setUsuario(usuario);
         cita.setEstado("PENDIENTE");
         cita.setFechaRegistro(LocalDateTime.now());
 
+        // Usuario opcional (admin que crea la cita)
+        if (citaDTO.getIdUsuario() != null) {
+            Usuario usuario = usuarioRepository.findById(citaDTO.getIdUsuario())
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado"));
+            cita.setCreadoPor(usuario);
+        }
+
         Cita guardada = citaRepository.save(cita);
 
-        // RESPALDO BINARIO PROFESIONAL
+        // respaldo binario
         serializationService.guardarCita(guardada);
 
         return mapToDTO(guardada);
     }
-
     @Override
     @Transactional(readOnly = true)
     public List<CitaResponseDTO> listar() {
-        return citaRepository.findAll().stream()
+        return citaRepository.findAll()
+                .stream()
                 .map(this::mapToDTO)
                 .collect(Collectors.toList());
     }
@@ -79,6 +84,7 @@ public class CitaServiceImpl implements CitaService {
     @Override
     @Transactional
     public CitaResponseDTO actualizar(Long id, CitaRequestDTO citaDTO) {
+
         Cita existente = citaRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cita no encontrada"));
 
@@ -98,8 +104,14 @@ public class CitaServiceImpl implements CitaService {
     @Override
     @Transactional
     public void cancelar(Long id) {
+
         Cita cita = citaRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cita no encontrada"));
+
+        if ("CANCELADA".equals(cita.getEstado())) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "La cita ya está cancelada");
+        }
+
         cita.setEstado("CANCELADA");
         citaRepository.save(cita);
     }
@@ -112,6 +124,7 @@ public class CitaServiceImpl implements CitaService {
     }
 
     private CitaResponseDTO mapToDTO(Cita entity) {
+
         CitaResponseDTO dto = new CitaResponseDTO();
         dto.setIdCita(entity.getIdCita());
         dto.setFecha(entity.getFecha());
@@ -122,13 +135,20 @@ public class CitaServiceImpl implements CitaService {
         dto.setFechaRegistro(entity.getFechaRegistro());
 
         dto.setIdPaciente(entity.getPaciente().getIdPaciente());
-        dto.setNombrePaciente(entity.getPaciente().getNombres() + " " + entity.getPaciente().getApellidos());
+        dto.setNombrePaciente(
+                entity.getPaciente().getNombres() + " " + entity.getPaciente().getApellidos()
+        );
 
         dto.setIdMedico(entity.getMedico().getIdMedico());
-        dto.setNombreMedico(entity.getMedico().getNombres() + " " + entity.getMedico().getApellidos());
+        dto.setNombreMedico(
+                entity.getMedico().getNombres() + " " + entity.getMedico().getApellidos()
+        );
 
-        dto.setIdUsuario(entity.getUsuario().getIdUsuario());
-        dto.setNombreUsuario(entity.getUsuario().getUsername());
+        // Usuario opcional
+        if (entity.getCreadoPor() != null) {
+            dto.setIdUsuario(entity.getCreadoPor().getIdUsuario());
+            dto.setNombreUsuario(entity.getCreadoPor().getUsername());
+        }
 
         return dto;
     }
