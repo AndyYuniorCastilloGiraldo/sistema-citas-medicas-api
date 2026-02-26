@@ -1,0 +1,85 @@
+[ {
+  "idCita" : 1,
+  "fecha" : [ 2026, 3, 15 ],
+  "hora" : [ 14, 30 ],
+  "motivo" : "Consulta general",
+  "estado" : "PENDIENTE",
+  "observaciones" : "Paciente con dolor de cabeza",
+  "fechaRegistro" : [ 2026, 2, 26, 9, 6, 13, 296250300 ],
+  "paciente" : {
+    "idPaciente" : 1,
+    "nombres" : "Juan",
+    "apellidos" : "Pérez",
+    "dni" : "12345678",
+    "telefono" : "987654322",
+    "correo" : "juan.perez@example.com",
+    "direccion" : "Calle Falsa 123",
+    "fechaRegistro" : [ 2026, 2, 26, 2, 10, 15, 544146000 ]
+  },
+  "medico" : {
+    "idMedico" : 1,
+    "nombres" : "Carlos",
+    "apellidos" : "González",
+    "cmp" : "CMP-12345",
+    "telefono" : "987654321",
+    "correo" : "carlos.gonzalez@example.com",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "Atención a enfermedades del corazónn"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 1,
+    "username" : "admin",
+    "password" : "$2a$10$8R115rnT9JYD9YiKqPdtjOtu5kjvBJtVeYj4fZL2XS9vrp1kNuwd.",
+    "estado" : false,
+    "fechaCreacion" : null,
+    "rol" : {
+      "idRol" : 1,
+      "nombre" : "ROLE_ADMIN"
+    }
+  }
+}, {
+  "idCita" : 2,
+  "fecha" : [ 2026, 2, 27 ],
+  "hora" : [ 11, 11 ],
+  "motivo" : "dolor estomacal",
+  "estado" : "PENDIENTE",
+  "observaciones" : "asasa",
+  "fechaRegistro" : [ 2026, 2, 26, 9, 41, 36, 444817200 ],
+  "paciente" : {
+    "idPaciente" : 1,
+    "nombres" : "Juan",
+    "apellidos" : "Pérez",
+    "dni" : "12345678",
+    "telefono" : "987654322",
+    "correo" : "juan.perez@example.com",
+    "direccion" : "Calle Falsa 123",
+    "fechaRegistro" : [ 2026, 2, 26, 2, 10, 15, 544146000 ]
+  },
+  "medico" : {
+    "idMedico" : 1,
+    "nombres" : "Carlos",
+    "apellidos" : "González",
+    "cmp" : "CMP-12345",
+    "telefono" : "987654321",
+    "correo" : "carlos.gonzalez@example.com",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "Atención a enfermedades del corazónn"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 9,
+    "username" : "casti",
+    "password" : "$2a$10$2E3umAwq5BAm/IzgOLZhAu.RTCaKGFvbfEcpL0zctW82BjTspb5pC",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 26, 2, 42, 5, 926748000 ],
+    "rol" : {
+      "idRol" : 2,
+      "nombre" : "ROLE_USUARIO"
+    }
+  }
+} ]

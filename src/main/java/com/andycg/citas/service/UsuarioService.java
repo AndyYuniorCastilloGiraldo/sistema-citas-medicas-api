@@ -18,4 +18,6 @@ public interface UsuarioService {
     void cambiarEstado(Long id, Boolean estado);
 
     void eliminar(Long id);
+    UsuarioResponseDTO crear(RegisterRequest request);
+    
 }

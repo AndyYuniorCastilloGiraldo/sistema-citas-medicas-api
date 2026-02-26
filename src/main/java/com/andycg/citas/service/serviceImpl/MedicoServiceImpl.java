@@ -103,8 +103,12 @@ public class MedicoServiceImpl implements MedicoService {
         dto.setCmp(entity.getCmp());
         dto.setTelefono(entity.getTelefono());
         dto.setCorreo(entity.getCorreo());
-        dto.setIdEspecialidad(entity.getEspecialidad().getIdEspecialidad());
-        dto.setNombreEspecialidad(entity.getEspecialidad().getNombre());
+        
+        if (entity.getEspecialidad() != null) {
+            dto.setIdEspecialidad(entity.getEspecialidad().getIdEspecialidad());
+            dto.setNombreEspecialidad(entity.getEspecialidad().getNombre());
+        }
+        
         return dto;
     }
 }

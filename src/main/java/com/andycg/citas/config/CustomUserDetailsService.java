@@ -13,24 +13,27 @@ import java.util.Collections;
 @RequiredArgsConstructor
 public class CustomUserDetailsService implements UserDetailsService {
 
-    private final UsuarioRepository usuarioRepository;
+        private final UsuarioRepository usuarioRepository;
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        @Override
+        public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        Usuario usuario = usuarioRepository.findByUsernameWithRol(username)
-                .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado"));
+                Usuario usuario = usuarioRepository.findByUsernameWithRol(username)
+                                .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado"));
 
-        return new User(
-                usuario.getUsername(),
-                usuario.getPassword(),
-                usuario.getEstado(), // enabled
-                true,
-                true,
-                true,
-                Collections.singletonList(
-                        new SimpleGrantedAuthority(usuario.getRol().getNombre())
-                )
-        );
-    }
+                String roleName = usuario.getRol().getNombre();
+                if (!roleName.startsWith("ROLE_")) {
+                        roleName = "ROLE_" + roleName;
+                }
+
+                return new User(
+                                usuario.getUsername(),
+                                usuario.getPassword(),
+                                usuario.getEstado(),
+                                true,
+                                true,
+                                true,
+                                Collections.singletonList(
+                                                new SimpleGrantedAuthority(roleName)));
+        }
 }

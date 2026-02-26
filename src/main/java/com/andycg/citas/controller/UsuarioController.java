@@ -57,4 +57,9 @@ public class UsuarioController {
                 usuarioService.cambiarEstado(id, estado);
                 return ResponseEntity.ok().build();
         }
+        @PostMapping("/crear")
+        @PreAuthorize("hasRole('ADMIN')")
+        public ResponseEntity<UsuarioResponseDTO> crearUsuarioAdmin(@RequestBody RegisterRequest request) {
+            return ResponseEntity.ok(usuarioService.crear(request));
+        }
 }

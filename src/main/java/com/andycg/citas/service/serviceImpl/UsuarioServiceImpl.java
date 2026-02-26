@@ -30,19 +30,16 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     @Transactional
     public UsuarioResponseDTO registrar(RegisterRequest request) {
+
         if (usuarioRepository.findByUsername(request.getUsername()).isPresent()) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "El nombre de usuario ya existe");
         }
 
-        Rol rol;
-        if (request.getRolId() != null) {
-            rol = rolRepository.findById(request.getRolId())
-                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Rol no encontrado"));
-        } else {
-            rol = rolRepository.findByNombre("ROLE_USUARIO")
-                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
-                            "Error interno: Rol por defecto no configurado"));
-        }
+        Rol rol = rolRepository.findByNombre("ROLE_USUARIO")
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.INTERNAL_SERVER_ERROR,
+                        "Rol por defecto no configurado"
+                ));
 
         Usuario usuario = new Usuario();
         usuario.setUsername(request.getUsername());
@@ -51,8 +48,31 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuario.setEstado(true);
         usuario.setFechaCreacion(LocalDateTime.now());
 
-        Usuario guardado = usuarioRepository.save(usuario);
-        return mapToDTO(guardado);
+        return mapToDTO(usuarioRepository.save(usuario));
+    }
+    @Override
+    @Transactional
+    public UsuarioResponseDTO crear(RegisterRequest request) {
+
+        if (request.getRolId() == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Debe seleccionar un rol");
+        }
+
+        if (usuarioRepository.findByUsername(request.getUsername()).isPresent()) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "El nombre de usuario ya existe");
+        }
+
+        Rol rol = rolRepository.findById(request.getRolId())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Rol no encontrado"));
+
+        Usuario usuario = new Usuario();
+        usuario.setUsername(request.getUsername());
+        usuario.setPassword(passwordEncoder.encode(request.getPassword()));
+        usuario.setRol(rol);
+        usuario.setEstado(true);
+        usuario.setFechaCreacion(LocalDateTime.now());
+
+        return mapToDTO(usuarioRepository.save(usuario));
     }
 
     @Override

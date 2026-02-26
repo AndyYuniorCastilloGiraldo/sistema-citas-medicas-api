@@ -134,15 +134,19 @@ public class CitaServiceImpl implements CitaService {
         dto.setObservaciones(entity.getObservaciones());
         dto.setFechaRegistro(entity.getFechaRegistro());
 
-        dto.setIdPaciente(entity.getPaciente().getIdPaciente());
-        dto.setNombrePaciente(
-                entity.getPaciente().getNombres() + " " + entity.getPaciente().getApellidos()
-        );
+        if (entity.getPaciente() != null) {
+            dto.setIdPaciente(entity.getPaciente().getIdPaciente());
+            dto.setNombrePaciente(
+                    entity.getPaciente().getNombres() + " " + entity.getPaciente().getApellidos()
+            );
+        }
 
-        dto.setIdMedico(entity.getMedico().getIdMedico());
-        dto.setNombreMedico(
-                entity.getMedico().getNombres() + " " + entity.getMedico().getApellidos()
-        );
+        if (entity.getMedico() != null) {
+            dto.setIdMedico(entity.getMedico().getIdMedico());
+            dto.setNombreMedico(
+                    entity.getMedico().getNombres() + " " + entity.getMedico().getApellidos()
+            );
+        }
 
         // Usuario opcional
         if (entity.getCreadoPor() != null) {
