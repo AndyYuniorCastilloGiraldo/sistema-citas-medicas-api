@@ -26,8 +26,11 @@ public class DataInitializer {
                         Rol userRol = rolRepository.findByNombre("ROLE_USUARIO")
                                         .orElseGet(() -> rolRepository.save(
                                                         new Rol(null, "ROLE_USUARIO")));
+                        Rol mediRol = rolRepository.findByNombre("ROLE_MEDICO")
+                                .orElseGet(() -> rolRepository.save(
+                                                new Rol(null, "ROLE_MEDICO")));
 
-                        if (usuarioRepository.findByUsername("admin").isEmpty()) {
+                        if (usuarioRepository.findByUsername("admin@123").isEmpty()) {
 
                                 Usuario admin = new Usuario();
                                 admin.setUsername("admin@123");

@@ -30,7 +30,7 @@ public class MedicoController {
         return ResponseEntity.ok(medicoService.obtenerPorId(id));
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN') or hasRole('USUARIO') ")
     @PostMapping("/registrar")
     public ResponseEntity<MedicoResponseDTO> registrar(@RequestBody MedicoRequestDTO medicoDTO) {
         return new ResponseEntity<>(medicoService.registrar(medicoDTO), HttpStatus.CREATED);
