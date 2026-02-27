@@ -31,7 +31,7 @@ public class PacienteController {
         return ResponseEntity.ok(pacienteService.obtenerPorId(id));
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('ADMIN')or hasRole('USUARIO')")
     @PostMapping("/registrar")
     public ResponseEntity<PacienteResponseDTO> registrar(@RequestBody PacienteRequestDTO pacienteDTO) {
         return new ResponseEntity<>(pacienteService.registrar(pacienteDTO), HttpStatus.CREATED);

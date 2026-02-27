@@ -82,4 +82,214 @@
       "nombre" : "ROLE_USUARIO"
     }
   }
+}, {
+  "idCita" : 3,
+  "fecha" : [ 2026, 2, 6 ],
+  "hora" : [ 11, 11 ],
+  "motivo" : "dolor estomacal",
+  "estado" : "PENDIENTE",
+  "observaciones" : "asdasdasdasd",
+  "fechaRegistro" : [ 2026, 2, 27, 3, 47, 8, 671836900 ],
+  "paciente" : {
+    "idPaciente" : 4,
+    "nombres" : "ANDY",
+    "apellidos" : " Giraldo",
+    "dni" : "60483232",
+    "telefono" : "931111182",
+    "correo" : "andy@gmail",
+    "direccion" : "Avenida General Salaverry 2370",
+    "fechaRegistro" : [ 2026, 2, 27, 3, 27, 28, 258336000 ]
+  },
+  "medico" : {
+    "idMedico" : 1,
+    "nombres" : "Carlos",
+    "apellidos" : "González",
+    "cmp" : "CMP-12345",
+    "telefono" : "987654321",
+    "correo" : "carlos.gonzalez@example.com",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "Atención a enfermedades del corazónn"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 1,
+    "username" : "admin",
+    "password" : "$2a$10$8R115rnT9JYD9YiKqPdtjOtu5kjvBJtVeYj4fZL2XS9vrp1kNuwd.",
+    "estado" : false,
+    "fechaCreacion" : null,
+    "rol" : {
+      "idRol" : 1,
+      "nombre" : "ROLE_ADMIN"
+    }
+  }
+}, {
+  "idCita" : 4,
+  "fecha" : [ 2026, 11, 11 ],
+  "hora" : [ 11, 11 ],
+  "motivo" : "adada",
+  "estado" : "PENDIENTE",
+  "observaciones" : "aadada",
+  "fechaRegistro" : [ 2026, 2, 27, 3, 58, 31, 455612800 ],
+  "paciente" : {
+    "idPaciente" : 5,
+    "nombres" : "yunioraasa",
+    "apellidos" : "Castillo Giraldoasa",
+    "dni" : "1234567811",
+    "telefono" : "92585618411",
+    "correo" : "jajaja@andy",
+    "direccion" : "Avenida General Salaverry 2370",
+    "fechaRegistro" : [ 2026, 2, 27, 3, 58, 1, 966258000 ]
+  },
+  "medico" : {
+    "idMedico" : 1,
+    "nombres" : "Carlos",
+    "apellidos" : "González",
+    "cmp" : "CMP-12345",
+    "telefono" : "987654321",
+    "correo" : "carlos.gonzalez@example.com",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "Atención a enfermedades del corazónn"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 39,
+    "username" : "jajaja@andy",
+    "password" : "$2a$10$viv.6bFnTIHShedmf7vQ9OQyWVGm4xjhNokydF/SZqWyctugLkXVO",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 27, 3, 58, 1, 927242000 ],
+    "rol" : {
+      "idRol" : 2,
+      "nombre" : "ROLE_USUARIO"
+    }
+  }
+}, {
+  "idCita" : 5,
+  "fecha" : [ 2026, 3, 6 ],
+  "hora" : [ 11, 11 ],
+  "motivo" : "aasasasqq",
+  "estado" : "PENDIENTE",
+  "observaciones" : "adddddddddddddddd",
+  "fechaRegistro" : [ 2026, 2, 27, 4, 14, 26, 737422400 ],
+  "paciente" : {
+    "idPaciente" : 1,
+    "nombres" : "Juan",
+    "apellidos" : "Pérez",
+    "dni" : "12345678",
+    "telefono" : "987654322",
+    "correo" : "juan.perez@example.com",
+    "direccion" : "Calle Falsa 123",
+    "fechaRegistro" : [ 2026, 2, 26, 2, 10, 15, 544146000 ]
+  },
+  "medico" : {
+    "idMedico" : 4,
+    "nombres" : "andyyyyyyy3333",
+    "apellidos" : "aaaaa",
+    "cmp" : "anddd",
+    "telefono" : "1222",
+    "correo" : "medico@1",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "Atención a enfermedades del corazónn"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 40,
+    "username" : "juan@gmail",
+    "password" : "$2a$10$8XdqWrTWUb8WviVs/gFoeucTpjTjJ1iqv71llEGMKIX.VfisUJwEy",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 27, 4, 12, 34, 995596000 ],
+    "rol" : {
+      "idRol" : 2,
+      "nombre" : "ROLE_USUARIO"
+    }
+  }
+}, {
+  "idCita" : 6,
+  "fecha" : [ 2026, 11, 11 ],
+  "hora" : [ 12, 22 ],
+  "motivo" : "kasdasdajsvd",
+  "estado" : "PENDIENTE",
+  "observaciones" : "jhashass",
+  "fechaRegistro" : [ 2026, 2, 27, 4, 32, 20, 751075200 ],
+  "paciente" : {
+    "idPaciente" : 7,
+    "nombres" : "yango",
+    "apellidos" : "andy",
+    "dni" : "7626626",
+    "telefono" : "1267162",
+    "correo" : "yango@yango",
+    "direccion" : "Avenida General Salaverry 2370",
+    "fechaRegistro" : [ 2026, 2, 27, 4, 31, 36, 236287000 ]
+  },
+  "medico" : {
+    "idMedico" : 4,
+    "nombres" : "andyyyyyyy3333",
+    "apellidos" : "aaaaa",
+    "cmp" : "anddd",
+    "telefono" : "1222",
+    "correo" : "medico@1",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "Atención a enfermedades del corazónn"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 43,
+    "username" : "yango@yango",
+    "password" : "$2a$10$pXJdeQN5AZ8dm7WsuKz5j.Rz/C1jRcRlfMSB4swfNeBOKYpLmuDOa",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 27, 4, 31, 36, 488680000 ],
+    "rol" : {
+      "idRol" : 2,
+      "nombre" : "ROLE_USUARIO"
+    }
+  }
+}, {
+  "idCita" : 7,
+  "fecha" : [ 2026, 2, 28 ],
+  "hora" : [ 11, 11 ],
+  "motivo" : "montoeaga",
+  "estado" : "PENDIENTE",
+  "observaciones" : "agfayta",
+  "fechaRegistro" : [ 2026, 2, 27, 5, 36, 16, 291102700 ],
+  "paciente" : {
+    "idPaciente" : 8,
+    "nombres" : "prueba",
+    "apellidos" : "prueba",
+    "dni" : "98128192871",
+    "telefono" : "12y121u",
+    "correo" : "prueba2@prueba",
+    "direccion" : "akshajshahsa",
+    "fechaRegistro" : [ 2026, 2, 27, 5, 13, 13, 528760000 ]
+  },
+  "medico" : {
+    "idMedico" : 6,
+    "nombres" : "ahahaha",
+    "apellidos" : "ahhahjaha",
+    "cmp" : "ahah",
+    "telefono" : "887877",
+    "correo" : "medi@medi",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "Atención a enfermedades del corazónn"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 1,
+    "username" : "admin",
+    "password" : "$2a$10$8R115rnT9JYD9YiKqPdtjOtu5kjvBJtVeYj4fZL2XS9vrp1kNuwd.",
+    "estado" : false,
+    "fechaCreacion" : null,
+    "rol" : {
+      "idRol" : 1,
+      "nombre" : "ROLE_ADMIN"
+    }
+  }
 } ]

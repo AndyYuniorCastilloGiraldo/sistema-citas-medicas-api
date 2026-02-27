@@ -27,14 +27,10 @@ public class DataInitializer {
                                         .orElseGet(() -> rolRepository.save(
                                                         new Rol(null, "ROLE_USUARIO")));
 
-                        Rol medicoRol = rolRepository.findByNombre("ROLE_MEDICO")
-                                        .orElseGet(() -> rolRepository.save(
-                                                        new Rol(null, "ROLE_MEDICO")));
-
                         if (usuarioRepository.findByUsername("admin").isEmpty()) {
 
                                 Usuario admin = new Usuario();
-                                admin.setUsername("admin");
+                                admin.setUsername("admin@123");
                                 admin.setPassword(
                                                 passwordEncoder.encode("admin123"));
                                 admin.setRol(adminRol);
