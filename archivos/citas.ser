@@ -32,6 +32,7 @@
   "creadoPor" : {
     "idUsuario" : 1,
     "username" : "admin",
+    "email" : null,
     "password" : "$2a$10$8R115rnT9JYD9YiKqPdtjOtu5kjvBJtVeYj4fZL2XS9vrp1kNuwd.",
     "estado" : false,
     "fechaCreacion" : null,
@@ -74,6 +75,7 @@
   "creadoPor" : {
     "idUsuario" : 9,
     "username" : "casti",
+    "email" : null,
     "password" : "$2a$10$2E3umAwq5BAm/IzgOLZhAu.RTCaKGFvbfEcpL0zctW82BjTspb5pC",
     "estado" : true,
     "fechaCreacion" : [ 2026, 2, 26, 2, 42, 5, 926748000 ],
@@ -116,6 +118,7 @@
   "creadoPor" : {
     "idUsuario" : 1,
     "username" : "admin",
+    "email" : null,
     "password" : "$2a$10$8R115rnT9JYD9YiKqPdtjOtu5kjvBJtVeYj4fZL2XS9vrp1kNuwd.",
     "estado" : false,
     "fechaCreacion" : null,
@@ -158,6 +161,7 @@
   "creadoPor" : {
     "idUsuario" : 39,
     "username" : "jajaja@andy",
+    "email" : null,
     "password" : "$2a$10$viv.6bFnTIHShedmf7vQ9OQyWVGm4xjhNokydF/SZqWyctugLkXVO",
     "estado" : true,
     "fechaCreacion" : [ 2026, 2, 27, 3, 58, 1, 927242000 ],
@@ -200,6 +204,7 @@
   "creadoPor" : {
     "idUsuario" : 40,
     "username" : "juan@gmail",
+    "email" : null,
     "password" : "$2a$10$8XdqWrTWUb8WviVs/gFoeucTpjTjJ1iqv71llEGMKIX.VfisUJwEy",
     "estado" : true,
     "fechaCreacion" : [ 2026, 2, 27, 4, 12, 34, 995596000 ],
@@ -242,6 +247,7 @@
   "creadoPor" : {
     "idUsuario" : 43,
     "username" : "yango@yango",
+    "email" : null,
     "password" : "$2a$10$pXJdeQN5AZ8dm7WsuKz5j.Rz/C1jRcRlfMSB4swfNeBOKYpLmuDOa",
     "estado" : true,
     "fechaCreacion" : [ 2026, 2, 27, 4, 31, 36, 488680000 ],
@@ -284,6 +290,7 @@
   "creadoPor" : {
     "idUsuario" : 1,
     "username" : "admin",
+    "email" : null,
     "password" : "$2a$10$8R115rnT9JYD9YiKqPdtjOtu5kjvBJtVeYj4fZL2XS9vrp1kNuwd.",
     "estado" : false,
     "fechaCreacion" : null,
@@ -326,6 +333,7 @@
   "creadoPor" : {
     "idUsuario" : 44,
     "username" : "prueba@gmail",
+    "email" : null,
     "password" : "$2a$10$Nh5STaivMjzFDc.tIvLJouTGHW40zZUW7.oSO16OLgQiSMPGFj8F6",
     "estado" : true,
     "fechaCreacion" : [ 2026, 2, 27, 5, 11, 51, 531405000 ],
@@ -368,6 +376,7 @@
   "creadoPor" : {
     "idUsuario" : 3,
     "username" : "prueba@gmail",
+    "email" : null,
     "password" : "$2a$10$7C2P5aJPhBpTDpDFBwcODuq3r9jSJRJAdZZlqDp/PlpZvjTgYlaNi",
     "estado" : true,
     "fechaCreacion" : [ 2026, 2, 27, 14, 35, 28, 682294000 ],
@@ -410,6 +419,7 @@
   "creadoPor" : {
     "idUsuario" : 1,
     "username" : "admin@123",
+    "email" : null,
     "password" : "$2a$10$aMowwvZa0iq5tysmWmTavO09Hwe8ZKLIlUo5nhoefjgojEBDLzFuW",
     "estado" : true,
     "fechaCreacion" : null,
@@ -452,6 +462,7 @@
   "creadoPor" : {
     "idUsuario" : 10,
     "username" : "giral@123",
+    "email" : null,
     "password" : "$2a$10$Hk9FXfBMa7XXt5pPw7dieOb2Wq1mJXoBz2X0Z6E5i50/2njdlC1UG",
     "estado" : true,
     "fechaCreacion" : [ 2026, 2, 27, 15, 23, 31, 73877000 ],
@@ -494,6 +505,7 @@
   "creadoPor" : {
     "idUsuario" : 1,
     "username" : "admin@123",
+    "email" : null,
     "password" : "$2a$10$aMowwvZa0iq5tysmWmTavO09Hwe8ZKLIlUo5nhoefjgojEBDLzFuW",
     "estado" : true,
     "fechaCreacion" : null,
@@ -536,6 +548,7 @@
   "creadoPor" : {
     "idUsuario" : 14,
     "username" : "nueva@nueva",
+    "email" : null,
     "password" : "$2a$10$KAHbRqQYPhct2cIYX8XhmuPGYqg/Dqrmg4C4OrHqsI753zQBdtifu",
     "estado" : true,
     "fechaCreacion" : [ 2026, 2, 27, 19, 7, 35, 215365000 ],
@@ -578,6 +591,7 @@
   "creadoPor" : {
     "idUsuario" : 1,
     "username" : "admin@123",
+    "email" : null,
     "password" : "$2a$10$aMowwvZa0iq5tysmWmTavO09Hwe8ZKLIlUo5nhoefjgojEBDLzFuW",
     "estado" : true,
     "fechaCreacion" : null,
@@ -620,6 +634,7 @@
   "creadoPor" : {
     "idUsuario" : 1,
     "username" : "admin@123",
+    "email" : null,
     "password" : "$2a$10$aMowwvZa0iq5tysmWmTavO09Hwe8ZKLIlUo5nhoefjgojEBDLzFuW",
     "estado" : true,
     "fechaCreacion" : null,
@@ -662,6 +677,7 @@
   "creadoPor" : {
     "idUsuario" : 15,
     "username" : "lopez@lopez",
+    "email" : null,
     "password" : "$2a$10$eh9EVYa2VdgtRaYMv1686e7JuoDF7dSEIA6LRlJYYfwvW6WyJaTie",
     "estado" : true,
     "fechaCreacion" : [ 2026, 2, 27, 19, 34, 57, 354140000 ],
@@ -704,12 +720,99 @@
   "creadoPor" : {
     "idUsuario" : 1,
     "username" : "admin@123",
+    "email" : null,
     "password" : "$2a$10$aMowwvZa0iq5tysmWmTavO09Hwe8ZKLIlUo5nhoefjgojEBDLzFuW",
     "estado" : true,
     "fechaCreacion" : null,
     "rol" : {
       "idRol" : 1,
       "nombre" : "ROLE_ADMIN"
+    }
+  }
+}, {
+  "idCita" : 1,
+  "fecha" : [ 2026, 2, 28 ],
+  "hora" : [ 12, 22 ],
+  "motivo" : "dolor estomacal",
+  "estado" : "PENDIENTE",
+  "observaciones" : "adsasdasd",
+  "fechaRegistro" : [ 2026, 2, 27, 22, 16, 26, 720383200 ],
+  "paciente" : {
+    "idPaciente" : 1,
+    "nombres" : "yango",
+    "apellidos" : "andy",
+    "dni" : "182371273",
+    "telefono" : "1267162",
+    "correo" : "yango@gamil.com",
+    "direccion" : "Avenida General Salaverry 2370",
+    "fechaRegistro" : [ 2026, 2, 27, 22, 12, 2, 53125000 ]
+  },
+  "medico" : {
+    "idMedico" : 2,
+    "nombres" : "apellido",
+    "apellidos" : "apellido",
+    "cmp" : "12311",
+    "telefono" : "123123",
+    "correo" : "medico1@gmail.com",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "adasdasdas"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 2,
+    "username" : "yango@gamil.com",
+    "email" : "yango@gamil.com",
+    "password" : "$2a$10$dAkhFJC1qNBVom3Zqa8L..7rQOpYVVfNuA.zXQRPtYVIALvp7OKIC",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 27, 22, 12, 2, 430011000 ],
+    "rol" : {
+      "idRol" : 2,
+      "nombre" : "ROLE_USUARIO"
+    }
+  }
+}, {
+  "idCita" : 2,
+  "fecha" : [ 2026, 2, 28 ],
+  "hora" : [ 12, 12 ],
+  "motivo" : "ahsdjadashdj",
+  "estado" : "PENDIENTE",
+  "observaciones" : "jasdhajsdha",
+  "fechaRegistro" : [ 2026, 2, 27, 23, 0, 10, 787082700 ],
+  "paciente" : {
+    "idPaciente" : 2,
+    "nombres" : "jaja",
+    "apellidos" : "jaja",
+    "dni" : "1231231",
+    "telefono" : "123123",
+    "correo" : "jaja@jaja.com",
+    "direccion" : "Avenida General Salaverry 2370",
+    "fechaRegistro" : [ 2026, 2, 27, 22, 59, 37, 573819000 ]
+  },
+  "medico" : {
+    "idMedico" : 3,
+    "nombres" : "medico3",
+    "apellidos" : "medico3",
+    "cmp" : "1312312",
+    "telefono" : "182381236",
+    "correo" : "medico@gamil.com",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "adasdasdas"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 7,
+    "username" : "jaja@jaja.com",
+    "email" : "jaja@jaja.com",
+    "password" : "$2a$10$KUHXyoMm/O8Sw6JcITxK5eA05gzEGoocCliMoZNllll6Iw90jkDf.",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 27, 22, 59, 37, 308188000 ],
+    "rol" : {
+      "idRol" : 2,
+      "nombre" : "ROLE_USUARIO"
     }
   }
 } ]

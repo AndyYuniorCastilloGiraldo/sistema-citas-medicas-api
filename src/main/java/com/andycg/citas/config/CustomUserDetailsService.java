@@ -16,10 +16,11 @@ public class CustomUserDetailsService implements UserDetailsService {
         private final UsuarioRepository usuarioRepository;
 
         @Override
-        public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
-                Usuario usuario = usuarioRepository.findByUsernameWithRol(username)
-                                .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado"));
+                Usuario usuario = usuarioRepository.findByEmailWithRol(email)
+                                .orElseThrow(() -> new UsernameNotFoundException(
+                                                "Usuario no encontrado con email: " + email));
 
                 String roleName = usuario.getRol().getNombre();
                 if (!roleName.startsWith("ROLE_")) {

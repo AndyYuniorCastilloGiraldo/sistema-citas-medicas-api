@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 public class UsuarioResponseDTO {
     private Long idUsuario;
     private String username;
+    private String email;
     private String rolNombre;
     private Boolean estado;
     private LocalDateTime fechaCreacion;

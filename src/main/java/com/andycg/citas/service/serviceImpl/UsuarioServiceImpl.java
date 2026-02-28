@@ -31,18 +31,18 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Transactional
     public UsuarioResponseDTO registrar(RegisterRequest request) {
 
-        if (usuarioRepository.findByUsername(request.getUsername()).isPresent()) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "El nombre de usuario ya existe");
+        if (usuarioRepository.existsByEmail(request.getEmail())) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "El correo electrónico ya está registrado");
         }
 
         Rol rol = rolRepository.findByNombre("ROLE_USUARIO")
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.INTERNAL_SERVER_ERROR,
-                        "Rol por defecto no configurado"
-                ));
+                        "Rol por defecto no configurado"));
 
         Usuario usuario = new Usuario();
-        usuario.setUsername(request.getUsername());
+        usuario.setUsername(request.getUsername()); // Ahora usamos el username del DTO
+        usuario.setEmail(request.getEmail());
         usuario.setPassword(passwordEncoder.encode(request.getPassword()));
         usuario.setRol(rol);
         usuario.setEstado(true);
@@ -50,6 +50,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
         return mapToDTO(usuarioRepository.save(usuario));
     }
+
     @Override
     @Transactional
     public UsuarioResponseDTO crear(RegisterRequest request) {
@@ -58,15 +59,16 @@ public class UsuarioServiceImpl implements UsuarioService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Debe seleccionar un rol");
         }
 
-        if (usuarioRepository.findByUsername(request.getUsername()).isPresent()) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "El nombre de usuario ya existe");
+        if (usuarioRepository.existsByEmail(request.getEmail())) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "El correo electrónico ya está registrado");
         }
 
         Rol rol = rolRepository.findById(request.getRolId())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Rol no encontrado"));
 
         Usuario usuario = new Usuario();
-        usuario.setUsername(request.getUsername());
+        usuario.setUsername(request.getUsername()); // Ahora usamos el username del DTO
+        usuario.setEmail(request.getEmail());
         usuario.setPassword(passwordEncoder.encode(request.getPassword()));
         usuario.setRol(rol);
         usuario.setEstado(true);
@@ -77,15 +79,15 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public AuthResponse login(LoginRequest request) {
-        Usuario usuario = usuarioRepository.findByUsername(request.getUsername())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Usuario no encontrado"));
+        Usuario usuario = usuarioRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Correo no registrado"));
 
         if (!passwordEncoder.matches(request.getPassword(), usuario.getPassword())) {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Credenciales inválidas");
         }
 
-        String token = jwtTokenProvider.generateToken(usuario.getUsername(), usuario.getRol().getNombre());
-        return new AuthResponse(token, usuario.getUsername(), usuario.getRol().getNombre());
+        String token = jwtTokenProvider.generateToken(usuario.getEmail(), usuario.getRol().getNombre());
+        return new AuthResponse(token, usuario.getEmail(), usuario.getRol().getNombre());
     }
 
     @Override
@@ -111,6 +113,7 @@ public class UsuarioServiceImpl implements UsuarioService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado"));
 
         existente.setUsername(usuarioDTO.getUsername());
+        existente.setEmail(usuarioDTO.getEmail()); // Ahora usamos el email del DTO si viene
         existente.setEstado(usuarioDTO.getEstado());
 
         if (usuarioDTO.getRolNombre() != null) {
@@ -144,6 +147,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         return UsuarioResponseDTO.builder()
                 .idUsuario(usuario.getIdUsuario())
                 .username(usuario.getUsername())
+                .email(usuario.getEmail())
                 .rolNombre(usuario.getRol().getNombre())
                 .estado(usuario.getEstado())
                 .fechaCreacion(usuario.getFechaCreacion())
