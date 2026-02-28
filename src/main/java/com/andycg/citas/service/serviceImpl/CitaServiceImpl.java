@@ -64,6 +64,7 @@ public class CitaServiceImpl implements CitaService {
 
         return mapToDTO(guardada);
     }
+
     @Override
     @Transactional(readOnly = true)
     public List<CitaResponseDTO> listar() {
@@ -116,6 +117,25 @@ public class CitaServiceImpl implements CitaService {
         citaRepository.save(cita);
     }
 
+    @Override
+    @Transactional
+    public void atender(Long id) {
+
+        Cita cita = citaRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cita no encontrada"));
+
+        if ("ATENDIDA".equals(cita.getEstado())) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "La cita ya fue atendida");
+        }
+
+        if ("CANCELADA".equals(cita.getEstado())) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No se puede atender una cita cancelada");
+        }
+
+        cita.setEstado("ATENDIDA");
+        citaRepository.save(cita);
+    }
+
     private void mapToEntity(CitaRequestDTO dto, Cita entity) {
         entity.setFecha(dto.getFecha());
         entity.setHora(dto.getHora());
@@ -137,15 +157,13 @@ public class CitaServiceImpl implements CitaService {
         if (entity.getPaciente() != null) {
             dto.setIdPaciente(entity.getPaciente().getIdPaciente());
             dto.setNombrePaciente(
-                    entity.getPaciente().getNombres() + " " + entity.getPaciente().getApellidos()
-            );
+                    entity.getPaciente().getNombres() + " " + entity.getPaciente().getApellidos());
         }
 
         if (entity.getMedico() != null) {
             dto.setIdMedico(entity.getMedico().getIdMedico());
             dto.setNombreMedico(
-                    entity.getMedico().getNombres() + " " + entity.getMedico().getApellidos()
-            );
+                    entity.getMedico().getNombres() + " " + entity.getMedico().getApellidos());
         }
 
         // Usuario opcional

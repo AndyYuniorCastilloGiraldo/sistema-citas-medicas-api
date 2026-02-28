@@ -17,7 +17,7 @@ import java.util.List;
 public class CitaController {
 
     @Autowired
-    private  CitaService citaService;
+    private CitaService citaService;
 
     @PreAuthorize("hasRole('ADMIN') or hasRole('USUARIO') or hasRole('MEDICO')")
     @GetMapping("/listar")
@@ -47,6 +47,13 @@ public class CitaController {
     @PatchMapping("/cancelar/{id}")
     public ResponseEntity<Void> cancelar(@PathVariable Long id) {
         citaService.cancelar(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PreAuthorize("hasRole('ADMIN') or hasRole('MEDICO')")
+    @PatchMapping("/atender/{id}")
+    public ResponseEntity<Void> atender(@PathVariable Long id) {
+        citaService.atender(id);
         return ResponseEntity.noContent().build();
     }
 }

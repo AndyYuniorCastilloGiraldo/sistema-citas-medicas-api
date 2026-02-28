@@ -16,4 +16,6 @@ public interface CitaService {
     CitaResponseDTO actualizar(Long id, CitaRequestDTO citaDTO);
 
     void cancelar(Long id);
+
+    void atender(Long id);
 }

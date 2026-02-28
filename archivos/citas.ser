@@ -460,4 +460,256 @@
       "nombre" : "ROLE_USUARIO"
     }
   }
+}, {
+  "idCita" : 4,
+  "fecha" : [ 2026, 2, 28 ],
+  "hora" : [ 11, 11 ],
+  "motivo" : "dolor de barriga",
+  "estado" : "PENDIENTE",
+  "observaciones" : "afasdasdasd",
+  "fechaRegistro" : [ 2026, 2, 27, 19, 6, 10, 683205000 ],
+  "paciente" : {
+    "idPaciente" : 1,
+    "nombres" : "andy",
+    "apellidos" : "castillo",
+    "dni" : "60483232",
+    "telefono" : "999999999",
+    "correo" : "andy@andy",
+    "direccion" : "izaguirre",
+    "fechaRegistro" : [ 2026, 2, 27, 14, 32, 6, 459769000 ]
+  },
+  "medico" : {
+    "idMedico" : 6,
+    "nombres" : "juan medico",
+    "apellidos" : "medicoooo",
+    "cmp" : "1231231",
+    "telefono" : "2342342",
+    "correo" : "juanmedico@medico",
+    "especialidad" : {
+      "idEspecialidad" : 2,
+      "nombre" : "curar dolo barriga",
+      "descripcion" : "curar"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 1,
+    "username" : "admin@123",
+    "password" : "$2a$10$aMowwvZa0iq5tysmWmTavO09Hwe8ZKLIlUo5nhoefjgojEBDLzFuW",
+    "estado" : true,
+    "fechaCreacion" : null,
+    "rol" : {
+      "idRol" : 1,
+      "nombre" : "ROLE_ADMIN"
+    }
+  }
+}, {
+  "idCita" : 5,
+  "fecha" : [ 2026, 2, 28 ],
+  "hora" : [ 11, 11 ],
+  "motivo" : "dolor intenso",
+  "estado" : "PENDIENTE",
+  "observaciones" : "askjasjas",
+  "fechaRegistro" : [ 2026, 2, 27, 19, 8, 18, 964953800 ],
+  "paciente" : {
+    "idPaciente" : 7,
+    "nombres" : "nueva",
+    "apellidos" : "nueva",
+    "dni" : "123123",
+    "telefono" : "123123",
+    "correo" : "nueva@nueva",
+    "direccion" : "las calles",
+    "fechaRegistro" : [ 2026, 2, 27, 19, 7, 35, 466122000 ]
+  },
+  "medico" : {
+    "idMedico" : 6,
+    "nombres" : "juan medico",
+    "apellidos" : "medicoooo",
+    "cmp" : "1231231",
+    "telefono" : "2342342",
+    "correo" : "juanmedico@medico",
+    "especialidad" : {
+      "idEspecialidad" : 2,
+      "nombre" : "curar dolo barriga",
+      "descripcion" : "curar"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 14,
+    "username" : "nueva@nueva",
+    "password" : "$2a$10$KAHbRqQYPhct2cIYX8XhmuPGYqg/Dqrmg4C4OrHqsI753zQBdtifu",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 27, 19, 7, 35, 215365000 ],
+    "rol" : {
+      "idRol" : 2,
+      "nombre" : "ROLE_USUARIO"
+    }
+  }
+}, {
+  "idCita" : 6,
+  "fecha" : [ 2026, 3, 22 ],
+  "hora" : [ 3, 33 ],
+  "motivo" : "dolor de cabeza",
+  "estado" : "PENDIENTE",
+  "observaciones" : "adsasdas",
+  "fechaRegistro" : [ 2026, 2, 27, 19, 11, 4, 523002200 ],
+  "paciente" : {
+    "idPaciente" : 2,
+    "nombres" : "prueba1",
+    "apellidos" : "pruebaaa",
+    "dni" : "1121212",
+    "telefono" : "31231231",
+    "correo" : "prueba@gmail",
+    "direccion" : "calle falsa",
+    "fechaRegistro" : [ 2026, 2, 27, 14, 35, 29, 15131000 ]
+  },
+  "medico" : {
+    "idMedico" : 6,
+    "nombres" : "juan medico",
+    "apellidos" : "medicoooo",
+    "cmp" : "1231231",
+    "telefono" : "2342342",
+    "correo" : "juanmedico@medico",
+    "especialidad" : {
+      "idEspecialidad" : 2,
+      "nombre" : "curar dolo barriga",
+      "descripcion" : "curar"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 1,
+    "username" : "admin@123",
+    "password" : "$2a$10$aMowwvZa0iq5tysmWmTavO09Hwe8ZKLIlUo5nhoefjgojEBDLzFuW",
+    "estado" : true,
+    "fechaCreacion" : null,
+    "rol" : {
+      "idRol" : 1,
+      "nombre" : "ROLE_ADMIN"
+    }
+  }
+}, {
+  "idCita" : 7,
+  "fecha" : [ 2026, 2, 28 ],
+  "hora" : [ 11, 1 ],
+  "motivo" : "dolor de barriga",
+  "estado" : "PENDIENTE",
+  "observaciones" : "adsasdasd",
+  "fechaRegistro" : [ 2026, 2, 27, 19, 41, 10, 515380700 ],
+  "paciente" : {
+    "idPaciente" : 8,
+    "nombres" : "lopez",
+    "apellidos" : "lopez castillo",
+    "dni" : "1231231",
+    "telefono" : "123123123",
+    "correo" : "lopez@lopez",
+    "direccion" : "la calle falsa ",
+    "fechaRegistro" : [ 2026, 2, 27, 19, 34, 56, 925606000 ]
+  },
+  "medico" : {
+    "idMedico" : 9,
+    "nombres" : "oscarrrrrrr",
+    "apellidos" : "adsasdas",
+    "cmp" : "|2123123",
+    "telefono" : "123123",
+    "correo" : "oscar1@oscar1",
+    "especialidad" : {
+      "idEspecialidad" : 2,
+      "nombre" : "curar dolo barriga",
+      "descripcion" : "curar"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 1,
+    "username" : "admin@123",
+    "password" : "$2a$10$aMowwvZa0iq5tysmWmTavO09Hwe8ZKLIlUo5nhoefjgojEBDLzFuW",
+    "estado" : true,
+    "fechaCreacion" : null,
+    "rol" : {
+      "idRol" : 1,
+      "nombre" : "ROLE_ADMIN"
+    }
+  }
+}, {
+  "idCita" : 8,
+  "fecha" : [ 2026, 2, 28 ],
+  "hora" : [ 11, 11 ],
+  "motivo" : "adkjajsdsdaa",
+  "estado" : "PENDIENTE",
+  "observaciones" : "asdasda",
+  "fechaRegistro" : [ 2026, 2, 27, 19, 42, 39, 920691700 ],
+  "paciente" : {
+    "idPaciente" : 8,
+    "nombres" : "lopez",
+    "apellidos" : "lopez castillo",
+    "dni" : "1231231",
+    "telefono" : "123123123",
+    "correo" : "lopez@lopez",
+    "direccion" : "la calle falsa ",
+    "fechaRegistro" : [ 2026, 2, 27, 19, 34, 56, 925606000 ]
+  },
+  "medico" : {
+    "idMedico" : 9,
+    "nombres" : "oscarrrrrrr",
+    "apellidos" : "adsasdas",
+    "cmp" : "|2123123",
+    "telefono" : "123123",
+    "correo" : "oscar1@oscar1",
+    "especialidad" : {
+      "idEspecialidad" : 2,
+      "nombre" : "curar dolo barriga",
+      "descripcion" : "curar"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 15,
+    "username" : "lopez@lopez",
+    "password" : "$2a$10$eh9EVYa2VdgtRaYMv1686e7JuoDF7dSEIA6LRlJYYfwvW6WyJaTie",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 27, 19, 34, 57, 354140000 ],
+    "rol" : {
+      "idRol" : 2,
+      "nombre" : "ROLE_USUARIO"
+    }
+  }
+}, {
+  "idCita" : 9,
+  "fecha" : [ 2026, 12, 12 ],
+  "hora" : [ 11, 21 ],
+  "motivo" : "asdasdas",
+  "estado" : "PENDIENTE",
+  "observaciones" : "asdasda",
+  "fechaRegistro" : [ 2026, 2, 27, 19, 59, 47, 899549600 ],
+  "paciente" : {
+    "idPaciente" : 8,
+    "nombres" : "lopez",
+    "apellidos" : "lopez castillo",
+    "dni" : "1231231",
+    "telefono" : "123123123",
+    "correo" : "lopez@lopez",
+    "direccion" : "la calle falsa ",
+    "fechaRegistro" : [ 2026, 2, 27, 19, 34, 56, 925606000 ]
+  },
+  "medico" : {
+    "idMedico" : 9,
+    "nombres" : "oscarrrrrrr",
+    "apellidos" : "adsasdas",
+    "cmp" : "|2123123",
+    "telefono" : "123123",
+    "correo" : "oscar1@oscar1",
+    "especialidad" : {
+      "idEspecialidad" : 2,
+      "nombre" : "curar dolo barriga",
+      "descripcion" : "curar"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 1,
+    "username" : "admin@123",
+    "password" : "$2a$10$aMowwvZa0iq5tysmWmTavO09Hwe8ZKLIlUo5nhoefjgojEBDLzFuW",
+    "estado" : true,
+    "fechaCreacion" : null,
+    "rol" : {
+      "idRol" : 1,
+      "nombre" : "ROLE_ADMIN"
+    }
+  }
 } ]
