@@ -35,10 +35,18 @@ public class UsuarioServiceImpl implements UsuarioService {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "El correo electrónico ya está registrado");
         }
 
-        Rol rol = rolRepository.findByNombre("ROLE_USUARIO")
-                .orElseThrow(() -> new ResponseStatusException(
-                        HttpStatus.INTERNAL_SERVER_ERROR,
-                        "Rol por defecto no configurado"));
+        // Si el rolId viene en el request, lo buscamos, sino asignamos el rol de
+        // PACIENTE por defecto
+        Rol rol;
+        if (request.getRolId() != null) {
+            rol = rolRepository.findById(request.getRolId())
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Rol no encontrado"));
+        } else {
+            rol = rolRepository.findByNombre("ROLE_PACIENTE")
+                    .orElseThrow(() -> new ResponseStatusException(
+                            HttpStatus.INTERNAL_SERVER_ERROR,
+                            "Rol por defecto no configurado"));
+        }
 
         Usuario usuario = new Usuario();
         usuario.setUsername(request.getUsername()); // Ahora usamos el username del DTO

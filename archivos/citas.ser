@@ -815,4 +815,133 @@
       "nombre" : "ROLE_USUARIO"
     }
   }
+}, {
+  "idCita" : 3,
+  "fecha" : [ 2026, 3, 1 ],
+  "hora" : [ 12, 22 ],
+  "motivo" : "dolor de cabeza",
+  "estado" : "PENDIENTE",
+  "observaciones" : "muy intenzo",
+  "fechaRegistro" : [ 2026, 2, 28, 0, 26, 55, 101722000 ],
+  "paciente" : {
+    "idPaciente" : 1,
+    "nombres" : "yango",
+    "apellidos" : "andy",
+    "dni" : "182371273",
+    "telefono" : "1267162",
+    "correo" : "yango@gamil.com",
+    "direccion" : "Avenida General Salaverry 2370",
+    "fechaRegistro" : [ 2026, 2, 27, 22, 12, 2, 53125000 ]
+  },
+  "medico" : {
+    "idMedico" : 5,
+    "nombres" : "medicooooo",
+    "apellidos" : "mediooooo",
+    "cmp" : "4234234",
+    "telefono" : "8897877",
+    "correo" : "medi@medi",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "adasdasdas"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 2,
+    "username" : "yango@gamil.com",
+    "email" : "yango@gamil.com",
+    "password" : "$2a$10$dAkhFJC1qNBVom3Zqa8L..7rQOpYVVfNuA.zXQRPtYVIALvp7OKIC",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 27, 22, 12, 2, 430011000 ],
+    "rol" : {
+      "idRol" : 2,
+      "nombre" : "ROLE_USUARIO"
+    }
+  }
+}, {
+  "idCita" : 4,
+  "fecha" : [ 2026, 3, 2 ],
+  "hora" : [ 23, 11 ],
+  "motivo" : "iadjasdhaaaj",
+  "estado" : "PENDIENTE",
+  "observaciones" : "jahsdjasjda",
+  "fechaRegistro" : [ 2026, 2, 28, 0, 49, 12, 547626800 ],
+  "paciente" : {
+    "idPaciente" : 3,
+    "nombres" : "andndndn",
+    "apellidos" : "ajsdjas",
+    "dni" : "812731",
+    "telefono" : "1827872",
+    "correo" : "aaa@a",
+    "direccion" : "las calles",
+    "fechaRegistro" : [ 2026, 2, 28, 0, 39, 33, 527236000 ]
+  },
+  "medico" : {
+    "idMedico" : 8,
+    "nombres" : "andyyyy",
+    "apellidos" : "ASUIASUIA",
+    "cmp" : "12321",
+    "telefono" : "",
+    "correo" : "ejemplo@gmail.com",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiología",
+      "descripcion" : "adasdasdas"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 1,
+    "username" : "admin@citas.com",
+    "email" : "admin@citas.com",
+    "password" : "$2a$10$XlAkPIItzV.yoUuoVM/8BOZSo4VWpCzwviMFwwIbcOxFdPgsFa8Kq",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 27, 21, 58, 49, 800709000 ],
+    "rol" : {
+      "idRol" : 1,
+      "nombre" : "ROLE_ADMIN"
+    }
+  }
+}, {
+  "idCita" : 1,
+  "fecha" : [ 2026, 3, 1 ],
+  "hora" : [ 11, 22 ],
+  "motivo" : "dolor de cabeza",
+  "estado" : "PENDIENTE",
+  "observaciones" : "mmy intenso",
+  "fechaRegistro" : [ 2026, 2, 28, 1, 2, 0, 547484200 ],
+  "paciente" : {
+    "idPaciente" : 1,
+    "nombres" : "yunior",
+    "apellidos" : "castillo",
+    "dni" : "7787887",
+    "telefono" : "99999999",
+    "correo" : "yuni@gmail.com",
+    "direccion" : "6666ava",
+    "fechaRegistro" : [ 2026, 2, 28, 0, 58, 42, 577533000 ]
+  },
+  "medico" : {
+    "idMedico" : 1,
+    "nombres" : "andy",
+    "apellidos" : "castillo",
+    "cmp" : "12224",
+    "telefono" : "887766",
+    "correo" : "medico@gamil.com",
+    "especialidad" : {
+      "idEspecialidad" : 1,
+      "nombre" : "Cardiologia",
+      "descripcion" : "consiste en eso"
+    }
+  },
+  "creadoPor" : {
+    "idUsuario" : 1,
+    "username" : "admin@citas.com",
+    "email" : "admin@citas.com",
+    "password" : "$2a$10$heMoYA74H7Hak//9r.OG1O0jxoAuaKeaqOdQ9rmgVISGx2QXGMHDO",
+    "estado" : true,
+    "fechaCreacion" : [ 2026, 2, 28, 0, 55, 5, 856176000 ],
+    "rol" : {
+      "idRol" : 1,
+      "nombre" : "ROLE_ADMIN"
+    }
+  }
 } ]
